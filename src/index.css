@@ -1,13 +1,65 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,600;1,300&display=swap');
+
+#app {
+    background-image: url(./images/bg-default.png);
+    height: 100vh;
+    overflow:scroll ;
+}
+nav {
+    border-radius: 4px;
+    background-color: aliceblue;
+    margin: 10px 180px;
+    padding: 6px 20px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+nav button{
+    flex-basis: 90px;
+    margin: 4px 4px;
+    border:none;
+    padding: 3px 10px ;
+    background-color: aliceblue;
+    box-shadow: 2px 2px 5px grey;
+    border-radius: 2px;
+    color: #2b2824;
+    font-family: 'Zilla Slab', serif;
+    font-size: 1em;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+section{
+    padding: 10px 30px;
+    background-color: aliceblue;
+    margin: 10px 180px;
+    border-radius: 4px;
+}
+section h4{
+    margin-top: 10px;
+    color: #2b2824;
+}
+section p {
+    text-align: justify;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@media(max-width: 700px){
+    nav{
+        justify-content: flex-start;
+        padding: 6px 15px;
+    }
+    nav button{
+        flex-basis: 80px;
+        font-size: 0.9em;
+        letter-spacing: 0.8px;
+    }
+}
+@media(max-width: 915px){
+    nav{
+        justify-content: flex-start;
+    }
+    nav button{
+        flex-basis: 85px;
+    }
 }
